@@ -1,6 +1,10 @@
 package me.aleiv.core.paper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import lombok.Data;
@@ -11,6 +15,8 @@ import me.aleiv.core.paper.events.GameTickEvent;
 @EqualsAndHashCode(callSuper = false)
 public class Game extends BukkitRunnable {
     Core instance;
+
+    List<Material> materials = new ArrayList<>();
 
     long gameTime = 0;
     long startTime = 0;
